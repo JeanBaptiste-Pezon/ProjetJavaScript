@@ -40,6 +40,11 @@
         }).done(function(data){
             if (data.est_connecte){
                 $('#form-deconnexion').slideDown(2000);
+                $('#add').slideDown(2000);
+                //$('#form-ingredient').slideDown(2000);
+                //$('#form-unite').slideDown(2000);
+                //$('#form-cocktail').slideDown(2000);
+                $('#list').slideDown(2000);
             } else {
                 $('#form-connexion').slideDown(2000);
             }
