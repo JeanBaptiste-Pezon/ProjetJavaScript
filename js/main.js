@@ -76,16 +76,6 @@
                 $('#form-deconnexion').slideDown(2000);
                 $('#add').slideDown(2000);
                 $('#list').slideDown(2000);
-                if(choix == "ct"){
-                    window.location.reload(true);
-                    console.log("ct");
-                } else if (choix == "ing"){
-                    window.location.reload(true);
-                    console.log('ing');
-                }else if (choix == "unit"){
-                    window.location.reload(true);
-                    console.log('unit');
-                } else {}
             } else {
                 $('#form-connexion').slideDown(2000);
             }
