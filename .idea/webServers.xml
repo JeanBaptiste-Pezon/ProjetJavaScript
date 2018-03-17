@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="87cc4012-0046-411c-b902-d9823626c0a2" name="ProjetJS" url="http://projetjspp.alwaysdata.net">
+      <webServer id="46880cc8-0249-4ac4-968c-9e59ef228dac" name="ProjetJs" url="http://ftp-projetjspp.alwaysdata.net">
         <fileTransfer host="ftp-projetjspp.alwaysdata.net" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
