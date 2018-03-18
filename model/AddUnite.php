@@ -14,7 +14,7 @@ $dbLink = $dbC->dbConnect();
 
 $description = $_POST['desc'];
 
-$request = $dbLink->prepare("INSERT INTO ingredient (description) 
+$request = $dbLink->prepare("INSERT INTO unite (description) 
                                               VALUES(:description)");
 
 $request->bindValue(':description', $description, PDO::PARAM_STR);
@@ -23,10 +23,3 @@ if (!$request->execute()) {
     echo 'Erreur : ' , $request->errorInfo(), PHP_EOL;
     exit();
 }
-
-
-
-
-
-
-

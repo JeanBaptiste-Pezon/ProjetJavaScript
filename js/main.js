@@ -91,6 +91,34 @@
             }).fail(erreurCritique);
             return false;
         });
+        $('#addIngredient').submit(function(){
+            $.ajax({
+                url: $(this).attr('action'),
+                method: $(this).attr('method'),
+                data: $(this).serialize()
+            }).done(function(){
+                console.log("Normalement un ingredient est ajouté");
+                $('#addCocktail').fadeOut(2000);
+                $('#addIngredient').fadeOut(2000);
+                $('#addUnit').fadeOut(2000);
+                $('#listCocktail').fadeOut(2000);
+            }).fail(erreurCritique);
+            return false;
+        });
+        $('#addUnit').submit(function(){
+            $.ajax({
+                url: $(this).attr('action'),
+                method: $(this).attr('method'),
+                data: $(this).serialize()
+            }).done(function(){
+                console.log("Normalement une unite est ajouté");
+                $('#addCocktail').fadeOut(2000);
+                $('#addIngredient').fadeOut(2000);
+                $('#addUnit').fadeOut(2000);
+                $('#listCocktail').fadeOut(2000);
+            }).fail(erreurCritique);
+            return false;
+        });
         $.ajax({
             url: '/json/est_connecte.php'
         }).done(function(data){

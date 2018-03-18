@@ -43,15 +43,14 @@
     </form>
 </div>
 <div>
-    <div>
-        <form  id="addCocktail" style="display: none" >
-            <p>form ajout Cocktail</p>
-            <label><b>Nom du cocktail</b></label>
-            <input type="text" placeholder="Entrer nom" name="NomCT" required>
-            <label><b>Description</b></label>
-            <input type="text" placeholder="Entrer description" name="DescCT" >
-        </form>
-    </div>
+    <form  id="addCocktail" style="display: none" >
+        <label><b>Nom du cocktail</b></label>
+        <input type="text" placeholder="Entrer nom" name="NomCT" required>
+        <label><b>Description</b></label>
+        <input type="text" placeholder="Entrer description" name="DescCT" >
+        <select name="ing"></select>
+        <select name="unite"></select>
+    </form>
 </div>
 <div>
     <form id="newIngredient" method="post" style="display: none" >
@@ -59,12 +58,10 @@
     </form>
 </div>
 <div>
-    <form id="addIngredient" action="TODO" method="post" style="display: none">
-        <p>form ajout ingredient</p>
+    <form id="addIngredient" action="model/AddIngredient.php" method="post" style="display: none">
         <label><b>Nom de l'ingredient</b></label>
-        <input type="text" placeholder="Entrer nom" name="NomIng" required>
-        <label><b>Description</b></label>
-        <input type="text" placeholder="Entrer description" name="DescIng" >
+        <input type="text" placeholder="Entrer nom" name="desc" required>
+        <button type="submit">Ajouter</button>
     </form>
 </div>
 <div>
@@ -74,16 +71,14 @@
 </div>
 <div>
     <div >
-        <form id="addUnit" style="display: none">
-            <p>form ajout unite</p>
+        <form id="addUnit" action="model/AddUnite.php" method="post" style="display: none">
             <label><b>Nom de l'unite</b></label>
-            <input type="text" placeholder="Entrer nom" name="NomUnit" required>
-            <label><b>Description</b></label>
-            <input type="text" placeholder="Entrer description" name="DescUnit" >
+            <input type="text" placeholder="Entrer nom" name="desc" >
+            <button type="submit">Ajouter</button>
         </form>
     </div>
 </div>
-<div >
+<div>
     <form id="listCT" method="post" style="display: none" >
             <button type="submit">Cocktail existant</button>
     </form>
