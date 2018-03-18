@@ -40,12 +40,39 @@
                 url: $(this).attr('action'),
                 method: $(this).attr('method'),
                 data: $(this).serialize()
-            }).done(function(){
+            }).done(function(data){
                 console.log("cocktail");
                 $('#addCocktail').slideDown(2000);
                 $('#addIngredient').fadeOut(2000);
                 $('#addUnit').fadeOut(2000);
                 $('#listCocktail').fadeOut(2000);
+
+                console.log(data.ing);
+
+                // let addCocktail = $("#addCocktail");
+                //
+                // let se1 = $('<select/>');
+                // let se2 = $('<select />');
+                // let se3 = $('<select />');
+                // let se4 = $('<select />');
+                // let se5 = $('<select />');
+                // let se6 = $('<select />');
+                // let se7 = $('<select />');
+                // let se8 = $('<select />');
+                //
+                // for(let i=0; i < data.ingredient.length; ++i) {
+                //
+                //     let currTask = new Task(data.tabtask[i]["NAME"],data.tabtask[i]["DATE"],data.tabtask[i]["TIME"]);
+                //     td1.html(currTask.getname());
+                //     td2.html(currTask.getdate());
+                //     td3.html(currTask.gettime());
+                //
+                //     tr.append(td1,td2,td3);
+                //     mes_taches.append(tr).show();
+                //
+                // }
+
+
             }).fail(erreurCritique);
             return false;
         });
