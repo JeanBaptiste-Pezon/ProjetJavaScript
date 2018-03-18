@@ -23,7 +23,6 @@
 
 <div>
     <form id="form-connexion" action="json/connexion.php" method="post" style="display: none">
-        <p>Connection</p>
         <label><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="username" required>
 
@@ -33,49 +32,59 @@
         <button type="submit">Login</button>
     </form>
 </div>
-<form id="form-deconnexion" action="json/deconnexion.php" method="post" style="display: none">
-    <div class="container">
+<div>
+    <form id="form-deconnexion" action="json/deconnexion.php" method="post" style="display: none">
         <button type="submit">Deconnexion</button>
-    </div>
-</form>
-<div>
-    <form id="add" action="json/choixBoutton.php" method="post" style="display: none" >
-        <button type="submit" value="ct" name="bt">Ajout cocktail</button>
-        <button type="submit" value="ing" name="bt">Ajout ingredient</button>
-        <button type="submit" value="unit" name="bt">Ajout unite</button>
     </form>
 </div>
 <div>
-    <form  id="form-ingredient" style="display: none" >
-        <p>form ajout ingredient</p>
-        <label><b>Nom de l'ingredient</b></label>
-        <input type="text" placeholder="Entrer nom" name="NomIng" required>
-        <label><b>Description</b></label>
-        <input type="text" placeholder="Entrer description" name="DescIng" >
+    <form id="newCocktail" method="post" style="display: none" >
+        <button type="submit">Ajout cocktail</button>
     </form>
 </div>
-<div >
-    <form id="form-unite" style="display: none">
-        <p>form ajout unite</p>
-        <label><b>Nom de l'unite</b></label>
-        <input type="text" placeholder="Entrer nom" name="NomUnit" required>
-        <label><b>Description</b></label>
-        <input type="text" placeholder="Entrer description" name="DescUnit" >
-    </form>
-</div>
-<div >
-    <form id="form-cocktail" style="display: none">
-        <p>form ajout cocktail</p>
+<div>
+    <form  id="addCocktail" style="display: none" >
         <label><b>Nom du cocktail</b></label>
         <input type="text" placeholder="Entrer nom" name="NomCT" required>
         <label><b>Description</b></label>
         <input type="text" placeholder="Entrer description" name="DescCT" >
+        <select name="ing"></select>
+        <select name="unite"></select>
     </form>
 </div>
-<div >
-    <form id="list" style="display: none" >
+<div>
+    <form id="newIngredient" method="post" style="display: none" >
+        <button type="submit">Ajout ingredient</button>
+    </form>
+</div>
+<div>
+    <form id="addIngredient" action="model/AddIngredient.php" method="post" style="display: none">
+        <label><b>Nom de l'ingredient</b></label>
+        <input type="text" placeholder="Entrer nom" name="desc" required>
+        <button type="submit">Ajouter</button>
+    </form>
+</div>
+<div>
+    <form id="newUnit" method="post" style="display: none" >
+        <button type="submit">Ajout unite</button>
+    </form>
+</div>
+<div>
+    <div >
+        <form id="addUnit" action="model/AddUnite.php" method="post" style="display: none">
+            <label><b>Nom de l'unite</b></label>
+            <input type="text" placeholder="Entrer nom" name="desc" >
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
+</div>
+<div>
+    <form id="listCT" method="post" style="display: none" >
             <button type="submit">Cocktail existant</button>
     </form>
+</div>
+<div id="listCocktail" style="display: none">
+    <p>List cocktail</p>
 </div>
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="js/vendor/jquery-3.2.1.min.js"></script>
